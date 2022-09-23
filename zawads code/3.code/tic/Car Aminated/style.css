@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+overflow: hidden;
+animation: bodyshake  linear 6s   infinite  ;
+}
+
+.sky {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: url(background.jpg);
+}
+
+.trees {
+    height: 100vh;
+    width: 100%;
+    background-image: url(trees.png);
+    background-size: cover;
+    position: absolute;
+    top: -144px;
+    animation: skymove 3s   infinite alternate-reverse ;
+}
+
+.track {
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    /* background-size: cover; */
+    position: absolute;
+    top: 70vh;
+    background-repeat: repeat-x;
+    animation: carmove  linear  6s   infinite  ;
+}
+
+.car {
+    height: 100px;
+    width: 324px;
+    background-size: cover;
+    background-image: url(car_body.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30vw;
+    bottom: -84vh;
+    animation: shake linear .3s infinite; 
+    cursor: pointer;
+    /* animation: jump 6s ease-in-out 2s 1  ; */
+}
+
+.wheel1 img {
+    width: 77px;
+    position: relative;
+    left: 36px;
+    top: 33px;
+    animation: rot .1s   infinite  ;
+    cursor: pointer;
+}
+
+.wheel2 img {
+    width: 77px;
+    position: relative;
+    left: 216px;
+    top: -44px;
+    animation: rot .1s   infinite  ;
+    cursor: pointer;
+}
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes carmove {
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes shake {
+    0%{
+     transform: translateY(-5px);   
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes bodyshake {
+    0%{
+     transform: translateY(-50px);   
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+@keyframes jump {
+    100%{
+        bottom: -17px;
+    }
+}
+
+@media (max-width:400px) {
+    .car{
+        left: 5vw;
+    }
+}
+.car:hover{
+    animation: none;
+}

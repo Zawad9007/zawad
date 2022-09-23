@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    height: 69px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+    padding: 0px 14px;
+}
+
+header {
+    background-color: deepskyblue;
+    position: sticky;
+    margin-bottom: 5px;
+}
+
+.logo img {
+    height: 100px;
+    position: relative;
+    top: auto;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+        opacity: 100;
+        height: 0px;
+    }
+
+    50% {
+        width: 40%;
+        opacity: 100;
+        height: 2px;
+        background-color: red;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 100;
+        height: 2px;
+        background-color: red;
+    }
+}
+
+.load {
+    opacity: 0;
+    width: 0%;
+    background-color: red;
+    animation: load 1s 1;
+}
+
+nav ul a:hover {
+    text-decoration: azure underline;
+    font-size: x-large;
+    color: chartreuse;
+}
+
+main img {
+    overflow: hidden;
+}
+
+.sea {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 6px;
+
+}
+
+.sea input {
+    border-radius: 9px;
+    width: 23vw;
+    height: 28px;
+}
+
+.btn {
+    background-color: deepskyblue;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    right: 572px;
+    width: 10vw;
+}
+
+.sea input:hover_ {
+    border: 2px solid black;
+}
+
+@media screen and (max-width:700px) {
+    .sea {
+        display: none;
+    }
+}
